@@ -1,0 +1,13 @@
+.app-container {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 20px;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

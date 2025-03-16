@@ -1,0 +1,12 @@
+.card {
+  border-radius: 10px;
+}
+
+button {
+  font-size: 1.1rem;
+}
+
+.alert {
+  font-size: 1.2rem;
+  font-weight: bold;
+}

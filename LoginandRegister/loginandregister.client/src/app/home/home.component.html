@@ -1,0 +1,50 @@
+
+
+<app-navbar-home></app-navbar-home>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <div class="card shadow-sm p-4 mb-4">
+        <h3 class="text-center">Conditional Message</h3>
+        <button class="btn btn-primary w-100" (click)="show = !show">Toggle Message</button>
+        <p *ngIf="show" class="alert alert-info text-center mt-3">This is a conditional message!</p>
+      </div>
+
+      <div class="card shadow-sm p-4 mb-4">
+        <h3 class="text-center">List of Items</h3>
+        <ul class="list-group">
+          <li *ngFor="let item of items; let i = index" class="list-group-item">
+            <strong>{{ i + 1 }}</strong> - {{ item }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="card shadow-sm p-4">
+        <h3 class="text-center">Select a Color</h3>
+        <div class="text-center mt-3">
+          <button class="btn btn-danger me-2" (click)="selectedColor = 'red'">Red</button>
+          <button class="btn btn-primary me-2" (click)="selectedColor = 'blue'">Blue</button>
+          <button class="btn btn-success" (click)="selectedColor = 'green'">Green</button>
+        </div>
+
+        <div class="alert text-center mt-3"
+             [ngClass]="{
+                'alert-danger': selectedColor === 'red',
+                'alert-primary': selectedColor === 'blue',
+                'alert-success': selectedColor === 'green',
+                'alert-secondary': !selectedColor
+              }">
+          <p *ngSwitch="selectedColor">
+            <span *ngSwitchCase="'red'">You selected <strong>Red</strong>!</span>
+            <span *ngSwitchCase="'blue'">You selected <strong>Blue</strong>!</span>
+            <span *ngSwitchCase="'green'">You selected <strong>Green</strong>!</span>
+            <span *ngSwitchDefault>Select a color.</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
