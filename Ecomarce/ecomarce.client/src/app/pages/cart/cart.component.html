@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <h2 class="text-center">Shopping Cart</h2>
+  <div *ngIf="cart.length === 0" class="alert alert-warning text-center">
+    Your cart is empty.
+  </div>
+  <div *ngFor="let item of cart; let i = index" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ item.title }}</h5>
+      <p class="card-text">Price: {{ item.price }} $</p>
+      <button (click)="removeItem(i)" class="btn btn-danger">Remove</button>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <button (click)="clearCart()" class="btn btn-warning">Clear Cart</button>
+    <a routerLink="/checkout" class="btn btn-success">Proceed to Checkout</a>
+  </div>
+</div>

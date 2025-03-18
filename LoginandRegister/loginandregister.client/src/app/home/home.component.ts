@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  show = false; 
-  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
-  selectedColor = ''; 
+ 
+  selectedColor:any = ''; 
 
 }

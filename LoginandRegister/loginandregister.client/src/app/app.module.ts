@@ -10,6 +10,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarHomeComponent } from './navbar-home/navbar-home.component';
+import { AddCategoryComponent } from './add-category/add-category.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { NavbarHomeComponent } from './navbar-home/navbar-home.component';
     HomeComponent,
     ProductComponent,
     NavbarHomeComponent,
+    AddCategoryComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,

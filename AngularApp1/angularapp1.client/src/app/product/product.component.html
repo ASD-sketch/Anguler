@@ -1,0 +1,20 @@
+<div *ngIf="selectedProduct">
+  <h2>{{ selectedProduct.name }}</h2>
+  <p>Price: ${{ selectedProduct.price }}</p>
+</div>
+
+
+<div class="alert text-center mt-3"
+     [ngClass]="{
+         'alert-danger': selectedColor === 'red',
+         'alert-primary': selectedColor === 'blue',
+         'alert-success': selectedColor === 'green',
+         'alert-secondary': !selectedColor
+       }">
+  <p *ngSwitch="selectedColor">
+    <span *ngSwitchCase="'red'">You selected <strong>Red</strong>!</span>
+    <span *ngSwitchCase="'blue'">You selected <strong>Blue</strong>!</span>
+    <span *ngSwitchCase="'green'">You selected <strong>Green</strong>!</span>
+    <span *ngSwitchDefault>Select a color.</span>
+  </p>
+</div>
