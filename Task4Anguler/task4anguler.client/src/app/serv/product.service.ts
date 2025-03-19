@@ -19,4 +19,9 @@ export class ProductService {
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
+
+  updateProduct(productId: number, updatedProduct: { title: string; price: number; description: string; category: string }): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${productId}`, updatedProduct);
+  }
+
 }

@@ -10,4 +10,7 @@ export class ProductComponent {
   @Input() selectedProduct: any;
 
   selectedColor: any = '';
+
+  today: Date = new Date();
+
 }

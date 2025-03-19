@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddCategoryComponent,
     AddProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    EditCategoryComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Category List</h2>
+  <a routerLink="/add-category" class="btn btn-primary my-2">➕ Add Category</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ category.name }}</td>
+        <td><img [src]="category.img" width="50"></td>
+        <td>
+          <a [routerLink]="['/edit-category', i + 1]" class="btn btn-warning mx-1">✏️ Edit</a>
+          <button class="btn btn-danger" (click)="deleteCategory(i)">🗑 Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -23,17 +23,18 @@ export class AddProductComponent implements OnInit {
   }
 
   addProduct() {
-    if (this.productName.trim() && this.selectedCategoryId) {
-      this.productService.addProduct({
-        name: this.productName,
-        categoryId: this.selectedCategoryId
-      }).subscribe(() => {
-        alert('Product added successfully!');
-        this.productName = '';
-        this.selectedCategoryId = null;
-      });
-    } else {
-      alert('Please enter product name and select a category.');
+    if (!this.productName.trim() || !this.selectedCategoryId) {
+      return alert('Please enter product name and select a category.');
     }
+
+    this.productService.addProduct({
+      name: this.productName,
+      categoryId: this.selectedCategoryId
+    }).subscribe(() => {
+      alert('Product added successfully!');
+      this.productName = '';
+      this.selectedCategoryId = null;
+    });
   }
+
 }

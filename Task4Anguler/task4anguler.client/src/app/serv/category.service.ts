@@ -17,4 +17,9 @@ export class CategoryService {
   addCategory(category: { name: string }): Observable<any> {
     return this.http.post(this.apiUrl, category);
   }
+
+  updateCategory(categoryId: number, updatedCategory: { name: string }): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${categoryId}`, updatedCategory);
+  }
+
 }
