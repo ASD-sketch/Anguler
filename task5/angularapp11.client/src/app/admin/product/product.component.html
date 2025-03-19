@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg border-0 rounded">
+        <div class="card-body">
+          <h3 class="text-center text-primary mb-4">🛍️ Add New Product</h3>
+          <form #product="ngForm" (ngSubmit)="postData(product.value)">
+            <div class="form-group mb-3">
+              <label for="name" class="form-label fw-bold">Product Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter product name" name="name" ngModel required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="avatar" class="form-label fw-bold">Product Image URL</label>
+              <input type="text" class="form-control" id="avatar" placeholder="Enter image URL" name="avatar" ngModel required>
+            </div>
+            <div class="form-group mb-3">
+              <label for="categoryId" class="form-label fw-bold">Category</label>
+              <select class="form-control" id="categoryId" name="categoryId" ngModel required>
+                <option value="" disabled selected>Select a Category</option>
+                <option *ngFor="let category of categories" [value]="category.id">
+                  {{ category.name }}
+                </option>
+              </select>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                <i class="fas fa-plus-circle"></i> Add Product
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

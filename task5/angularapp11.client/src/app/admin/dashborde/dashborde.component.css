@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f0f5;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.glass-sidebar {
+  position: fixed;
+  left: -280px;
+  width: 350px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(12px) saturate(180%);
+  border-right: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 0 15px 15px 0;
+  transition: all 0.4s ease-in-out;
+  padding: 50px 25px;
+}
+
+  .glass-sidebar:hover {
+    left: 0;
+    background: rgba(255, 255, 255, 0.8); /* ✅ جعله أكثر وضوحًا عند التفاعل */
+  }
+
+.sidebar-content {
+  position: relative;
+  z-index: 2;
+  color: black; /* ✅ جعل النصوص سوداء */
+  opacity: 1; /* ✅ إزالة أي شفافية زائدة */
+}
+
+  .sidebar-content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: black; /* ✅ جعل العنوان باللون الأسود */
+    font-weight: bold;
+  }
+
+.sidebar-menu {
+  list-style: none;
+  perspective: 1000px;
+}
+
+  .sidebar-menu li {
+    padding: 18px;
+    margin: 15px 0;
+    background: rgba(255, 255, 255, 0.7); /* ✅ جعل الخلفية بيضاء أكثر */
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: black; /* ✅ جعل النصوص سوداء */
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+    .sidebar-menu li:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateX(10px);
+      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .sidebar-menu li a {
+      text-decoration: none;
+      color: black;
+      display: block;
+      width: 100%;
+    }
+
+.active {
+  background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}

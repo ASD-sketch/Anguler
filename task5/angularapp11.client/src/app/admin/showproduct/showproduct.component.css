@@ -1,0 +1,41 @@
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .table th {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .table td {
+    font-size: 1rem;
+    padding: 12px;
+    vertical-align: middle;
+  }
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow-lg {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.product-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.badge-success {
+  font-size: 0.9rem;
+  background-color: #28a745;
+}

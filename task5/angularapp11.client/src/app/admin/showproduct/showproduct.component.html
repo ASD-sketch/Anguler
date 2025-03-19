@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4 text-primary">🛒 Products List</h2>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-bordered shadow-lg rounded text-center">
+      <thead class="thead-dark">
+        <tr class="bg-primary text-white">
+          <th style="width: 5%;">#</th>
+          <th style="width: 15%;">Image</th>
+          <th style="width: 20%;">Product Name</th>
+          <th style="width: 25%;">Description</th>
+          <th style="width: 10%;">Price</th>
+          <th style="width: 10%;">Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index" class="align-middle">
+          <td><strong>{{ i + 1 }}</strong></td>
+          <td>
+            <img [src]="product.image" class="product-img" alt="{{ product.name }}">
+          </td>
+          <td class="text-capitalize"><i class="fas fa-box"></i> {{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td><span class="badge badge-success p-2">💰 ${{ product.price }}</span></td>
+          <td>
+            <button class="btn btn-sm btn-info" (click)="editProduct(product.id)">edit</button>
+</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

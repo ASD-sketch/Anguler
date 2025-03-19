@@ -1,0 +1,27 @@
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .table th {
+    font-size: 1.2rem;
+    padding: 15px;
+  }
+
+  .table td {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+.table-hover tbody tr:hover {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease-in-out;
+}
+
+.shadow-lg {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
