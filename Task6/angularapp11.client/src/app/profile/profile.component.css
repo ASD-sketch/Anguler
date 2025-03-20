@@ -1,0 +1,19 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+h2 {
+  font-weight: bold;
+}

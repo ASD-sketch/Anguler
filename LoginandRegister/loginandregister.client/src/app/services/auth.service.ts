@@ -6,8 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://67cea6ee125cd5af757b6514.mockapi.io/Users';
-  private api = 'https://fakestoreapi.com/products';
+
+  private apiUrl = 'https://67cea6ee125cd5af757b6514.mockapi.io/Users';  
+  private api = 'https://fakestoreapi.com/products'; 
 
   constructor(private http: HttpClient) { }
 
@@ -21,8 +22,17 @@ export class AuthService {
 
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(this.api);
-
   }
 
+  updateUser(user: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${user.id}`, user);
+  }
 
+  getUserById(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
+
+  deleteUser(id: string): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/${id}`);
+  }
 }

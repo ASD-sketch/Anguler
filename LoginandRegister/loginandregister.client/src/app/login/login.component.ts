@@ -4,7 +4,7 @@ import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  standalone: false,
+  standalone:false,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -23,6 +23,10 @@ export class LoginComponent {
       if (user) {
         this.successMessage = 'Login successful!';
         this.errorMessage = '';
+
+        sessionStorage.setItem('loggedInUserEmail', user.email);
+        sessionStorage.setItem('loggedInUserName', user.name);
+        sessionStorage.setItem('ID', user.id);
 
         setTimeout(() => {
           this.router.navigate(['/home']);

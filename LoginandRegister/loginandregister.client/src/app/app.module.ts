@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { NavbarHomeComponent } from './navbar-home/navbar-home.component';
 import { AddCategoryComponent } from './add-category/add-category.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AddCategoryComponent } from './add-category/add-category.component';
     ProductComponent,
     NavbarHomeComponent,
     AddCategoryComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule, HttpClientModule,

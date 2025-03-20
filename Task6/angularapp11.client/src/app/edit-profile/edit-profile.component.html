@@ -1,0 +1,15 @@
+<div class="popup-overlay">
+  <div class="popup-content">
+    <h3>Edit Profile</h3>
+    <label>Name:</label>
+    <input [(ngModel)]="userCopy.name" class="form-control mb-2" />
+
+    <label>Email:</label>
+    <input [(ngModel)]="userCopy.Email" class="form-control mb-2" />
+
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="userCopy.age" class="form-control mb-2" />
+
+    <button (click)="save()" class="btn btn-success mt-2">Save Changes</button>
+  </div>
+</div>

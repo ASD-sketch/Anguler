@@ -1,0 +1,23 @@
+<div class="container d-flex justify-content-center mt-5">
+  <div class="card shadow-lg border-0 rounded-4 p-4" style="width: 400px;">
+    <h2 class="text-center mb-4 text-primary">User Profile</h2>
+    <div *ngIf="userData">
+      <div class="mb-3">
+        <p><strong>Name:</strong> {{ userData.name }}</p>
+      </div>
+      <div class="mb-3">
+        <p><strong>Email:</strong> {{ userData.Email }}</p>
+      </div>
+      <div class="mb-3">
+        <p><strong>Age:</strong> {{ userData.age }}</p>
+      </div>
+      <div class="text-center">
+        <button (click)="openEditPopup()" class="btn btn-primary mt-2 w-75">Edit Profile</button>
+      </div>
+      <app-edit-profile *ngIf="isPopupOpen"
+                        [userData]="userData"
+                        (userUpdated)="updateUser($event)">
+      </app-edit-profile>
+    </div>
+  </div>
+</div>

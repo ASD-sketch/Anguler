@@ -1,16 +1,15 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  standalone: false,
-  styleUrl: './app.component.css'
+  templateUrl: './app.component.html',  
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  product = {
-    name: 'Laptop',
-    price: 1200
-  };
+  parentMessage: string = 'Me';
+  showChild: boolean = true;
+
+  toggleChild() {
+    this.showChild = !this.showChild;
+  }
 }

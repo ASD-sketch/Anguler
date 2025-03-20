@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <div class="card p-4 shadow-lg border-0 rounded-4" style="width: 400px;">
+    <h3 class="text-center mb-4 text-primary">Login</h3>
+
+    <form #login="ngForm" (ngSubmit)="getData(login.value)">
+      <div class="form-group mb-3">
+        <input type="email" class="form-control rounded-3" id="exampleCheck1" placeholder="Email" name="Email" ngModel>
+      </div>
+
+      <div class="form-group mb-3">
+        <input type="password" class="form-control rounded-3" id="exampleCheck1" placeholder="Password" name="password" ngModel>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-100 mt-3 rounded-3">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

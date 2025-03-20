@@ -1,0 +1,6 @@
+@Task6_profile.Server_HostAddress = http://localhost:5114
+
+GET {{Task6_profile.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
