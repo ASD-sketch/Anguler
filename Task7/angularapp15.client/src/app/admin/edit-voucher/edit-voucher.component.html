@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form #update="ngForm" (ngSubmit)="updateVoucher(update.value)">
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">name</label>
+          <input type="text" class="form-control" placeholder="name" [(ngModel)]="voucher.name" name="name" ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputPassword1">image</label>
+          <input type="text" class="form-control" placeholder="price" [(ngModel)]="voucher.price" name="price" ngModel>
+        </div>
+
+        <div class="form-group">
+          <label for="exampleInputEmail1">name</label>
+          <input type="text" class="form-control" placeholder="quantity" [(ngModel)]="voucher.quantity" name="quantity" ngModel>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
